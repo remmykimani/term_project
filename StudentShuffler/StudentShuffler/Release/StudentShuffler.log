@@ -1,0 +1,24 @@
+﻿  StudentShuffler.cpp
+StudentShuffler.cpp(22): warning C4129: 'S': unrecognized character escape sequence
+StudentShuffler.cpp(22): warning C4129: 'Y': unrecognized character escape sequence
+StudentShuffler.cpp(22): warning C4129: 'I': unrecognized character escape sequence
+StudentShuffler.cpp(22): warning C4129: 'T': unrecognized character escape sequence
+StudentShuffler.cpp(22): warning C4129: 'i': unrecognized character escape sequence
+StudentShuffler.cpp(23): warning C4129: 'S': unrecognized character escape sequence
+StudentShuffler.cpp(23): warning C4129: 'Y': unrecognized character escape sequence
+StudentShuffler.cpp(23): warning C4129: 'I': unrecognized character escape sequence
+StudentShuffler.cpp(23): warning C4129: 'T': unrecognized character escape sequence
+StudentShuffler.cpp(23): warning C4129: 'i': unrecognized character escape sequence
+StudentShuffler.cpp(24): warning C4129: 'S': unrecognized character escape sequence
+StudentShuffler.cpp(24): warning C4129: 'Y': unrecognized character escape sequence
+StudentShuffler.cpp(24): warning C4129: 'I': unrecognized character escape sequence
+StudentShuffler.cpp(24): warning C4129: 'T': unrecognized character escape sequence
+StudentShuffler.cpp(24): warning C4129: 'i': unrecognized character escape sequence
+StudentShuffler.cpp(42): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  28 of 238 functions (11.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    30 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  StudentShuffler.vcxproj -> D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\Release\StudentShuffler.exe
+  StudentShuffler.vcxproj -> D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\Release\StudentShuffler.pdb (Full PDB)
