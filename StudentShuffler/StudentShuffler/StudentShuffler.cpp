@@ -26,10 +26,10 @@ class STUDENTS
 
 
 
-void filetovectorall(vector < STUDENTS >& student_info)
+void filetovectorall(vector < STUDENTS >& student_info,string filename)
 {
 	
-	ifstream file("inputICSALL.csv");
+	ifstream file(filename);
 
 
 	if (!file.is_open())
@@ -74,7 +74,7 @@ void print_all(vector<STUDENTS>&student_info)
 	}
 }
 
-void filetovectormale(vector <STUDENTS>&male_students,vector < STUDENTS >&student_info, vector<STUDENTS>&female_students)
+void filetovectorgender(vector <STUDENTS>&male_students,vector < STUDENTS >&student_info, vector<STUDENTS>&female_students)
 {
 			for (unsigned int x = 0; x < student_info.size(); x++)
 			{
@@ -234,7 +234,7 @@ void fileappendgroup_a(vector < STUDENTS >& group_a)
 {
 	//this is where the file is output to a file
 	ofstream group_aoutput;
-	group_aoutput.open("male_students.csv");
+	group_aoutput.open("group_a.csv");
 	for (unsigned int x = 0; x < group_a.size(); x++)
 	{
 		group_aoutput << group_a.at(x).admission;
@@ -250,7 +250,7 @@ void fileappendgroup_b(vector < STUDENTS >& group_b)
 {
 	//this is where the file is output to a file
 	ofstream group_boutput;
-	group_boutput.open("male_students.csv");
+	group_boutput.open("group_b.csv");
 	for (unsigned int x = 0; x < group_b.size(); x++)
 	{
 		group_boutput << group_b.at(x).admission;
@@ -263,10 +263,6 @@ void fileappendgroup_b(vector < STUDENTS >& group_b)
 }
 
 
-
-
-
-
 int main()
 {
 	vector<STUDENTS>student_info;
@@ -275,15 +271,109 @@ int main()
 	vector<STUDENTS>group_a;
 	vector<STUDENTS>group_b;
 
-
+	int num_file;
+	string filename;
+	int choice_firstpage;
+	int choice_display;
+	int choice_listtype;
 	
-	filetovectorall(student_info);
-	print_all(student_info);
 
-	//filetovectormale(male_students, student_info,female_students);
-	
 
-	//randomise_male(female_students, male_students, group_a, group_b);
+	do {
+		cout << "--------WELCOME TO THE STUDENT SHUFFLER PROGRAM--------\n"
+			<< "\tPLEASE MAKE YOUR CHOICE\n"
+			<< "\t\t1.ENTER FILES\n"
+			<< "\t\t2.EXIT THE PROGRAM\n";
+
+		cin >> choice_firstpage;
+		system("cls");
+		switch (choice_firstpage)
+		{
+		case 1:
+			cout << "ENTER THE NUMBER OF FILES YOU HAVE\n";
+			cin >> num_file;
+
+			for (int x = 0; x < num_file; x++)
+			{
+				cout << "PLEASE ENTER FILENAME\n";
+				cin >> filename;
+
+				filetovectorall(student_info, filename);
+			}
+			cout << "Reading Files....\n";
+
+			filetovectorgender(male_students, student_info, female_students);
+			cout << "Randomising Students\n";
+			randomise_female(female_students, male_students, group_a, group_b);
+			randomise_male(female_students, male_students, group_a, group_b);
+			cout << "-----files stored and shuffled sucessfully!-----\n\n";
+			break;
+		case 2:
+			exit(0);
+			break;
+		default:
+			cout << "WRONG SELECTION...TRY AGAIN\n";
+			//put a goto
+			break;
+		}
+
+
+		cout << "CHOOSE DISPLAY OPTION\n"
+			<< "\t1..DISPLAY LISTS ON SCREEN\n"
+			<< "\t2..SAVE THE LISTS\n"
+			<< "Choice: ";
+		cin >> choice_display;
+
+
+		switch (choice_display)
+		{
+		case 1:
+			system("cls");
+
+			cout << "WHICH LIST WOULD YOU LIKE TO DISPLAY?\n"
+				<< "\t1..LIST A\n"
+				<< "\t2..LIST B\n"
+				<< "\t3..BOTH LIST A AND LIST B\n"
+				<< "Choice: ";
+			cin >> choice_listtype;
+
+			switch (choice_listtype)
+			{
+			case 1:
+				print_group_a(group_a);
+				break;
+			case 2:
+				print_group_b(group_b);
+				break;
+			case 3:
+				cout << "\t------LIST A------\n";
+				print_group_a(group_a);
+				cout << "\t------LIST B------\n";
+				print_group_b(group_b);
+				break;
+
+			default:
+				cout << "WRONG SELECTION...TRY AGAIN\n";
+				//put a goto
+				break;
+			}
+		case 2:
+			system("cls");
+			cout << "\t----SAVING LIST A...\n\n";
+			fileappendgroup_a(group_a);
+			cout << "\t----SAVING LIST B...\n\n";
+			fileappendgroup_b(group_b);
+
+			cout << "List saved\n"
+				<< "\tList A path: D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\StudentShuffler\group_a.csv\n"
+				<< "\tList A path: D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\StudentShuffler\group_b.csv\n";
+
+		default:
+			cout << "WRONG SELECTION...TRY AGAIN\n";
+			//put a goto
+			break;
+		}
+	} while (true);
 
 
 
