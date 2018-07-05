@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+bool errormessage = true;
 
 class STUDENTS
 {
@@ -34,6 +35,7 @@ void filetovectorall(vector < STUDENTS >& student_info,string filename)
 
 	if (!file.is_open())
 	{
+		errormessage=false;
 		cout << "Error opening file" << endl;
 	}
 	else
@@ -172,6 +174,7 @@ void fileappendallmale(vector < STUDENTS >& male_students)
 
 void randomise_male(vector<STUDENTS>&female_students, vector<STUDENTS>&male_students, vector<STUDENTS>&group_a, vector<STUDENTS>&group_b)
 {
+
 	for (unsigned int x = 0; x < male_students.size() - 1; x += 2)//note use of x=+2(x=x+2)
 	{
 		group_a.push_back(male_students.at(x));
@@ -188,7 +191,9 @@ void randomise_male(vector<STUDENTS>&female_students, vector<STUDENTS>&male_stud
 }
 void print_group_a(vector<STUDENTS>&group_a)
 {
-	cout << "-----------------------------------";
+	system("cls");
+	cout << "-----------------------------------\n\n";
+	cout << "Number of students in List A:" << group_a.size()<<"\n" << endl;
 	for (unsigned int x = 0; x < group_a.size(); x++)
 	{
 		cout << group_a.at(x).admission;
@@ -196,12 +201,13 @@ void print_group_a(vector<STUDENTS>&group_a)
 		cout << group_a.at(x).surname;
 		cout << group_a.at(x).sex << "\n";
 	}
-	cout << "number:" << group_a.size() << endl;
+	
 }
 
 void print_group_b(vector<STUDENTS>&group_b)
 {
-	cout << "-----------------------------------";
+	cout << "\n\n-----------------------------------\n\n";
+	cout << "Number of students in List B:" << group_b.size() <<"\n"<< endl;
 	for (unsigned int x = 0; x < group_b.size(); x++)
 	{
 		cout << group_b.at(x).admission;
@@ -209,7 +215,7 @@ void print_group_b(vector<STUDENTS>&group_b)
 		cout << group_b.at(x).surname;
 		cout << group_b.at(x).sex << "\n";
 	}
-	cout << "number:" << group_b.size() << endl;
+	
 }
 
 
@@ -260,7 +266,31 @@ void fileappendgroup_b(vector < STUDENTS >& group_b)
 	}
 	group_boutput.close();
 
+}void choicedisplay (int choice_listtype, vector<STUDENTS>&group_a, vector<STUDENTS>&group_b)
+{
+		switch (choice_listtype)
+		{
+		case 1:
+			print_group_a(group_a);
+			break;
+		case 2:
+			print_group_b(group_b);
+			break;
+		case 3:
+			cout << "\t------LIST A------\n";
+			print_group_a(group_a);
+			cout << "\t------LIST B------\n";
+			print_group_b(group_b);
+			break;
+
+		default:
+			cout << "WRONG SELECTION...TRY AGAIN\n";
+			//put a goto
+			
+			break;
+		}
 }
+
 
 
 int main()
@@ -280,6 +310,7 @@ int main()
 
 
 	do {
+	a:
 		cout << "--------WELCOME TO THE STUDENT SHUFFLER PROGRAM--------\n"
 			<< "\tPLEASE MAKE YOUR CHOICE\n"
 			<< "\t\t1.ENTER FILES\n"
@@ -314,29 +345,29 @@ int main()
 		default:
 			cout << "WRONG SELECTION...TRY AGAIN\n";
 			//put a goto
+			goto a;
 			break;
 		}
 
-
+	b:
+		//system("cls");
 		cout << "CHOOSE DISPLAY OPTION\n"
 			<< "\t1..DISPLAY LISTS ON SCREEN\n"
 			<< "\t2..SAVE THE LISTS\n"
 			<< "Choice: ";
 		cin >> choice_display;
-
-
+	c:
 		switch (choice_display)
 		{
 		case 1:
 			system("cls");
-
 			cout << "WHICH LIST WOULD YOU LIKE TO DISPLAY?\n"
 				<< "\t1..LIST A\n"
 				<< "\t2..LIST B\n"
 				<< "\t3..BOTH LIST A AND LIST B\n"
 				<< "Choice: ";
 			cin >> choice_listtype;
-
+			//choicedisplay(choice_listtype, group_a, group_b);
 			switch (choice_listtype)
 			{
 			case 1:
@@ -355,8 +386,12 @@ int main()
 			default:
 				cout << "WRONG SELECTION...TRY AGAIN\n";
 				//put a goto
+				goto c;
+
 				break;
 			}
+			break;
+
 		case 2:
 			system("cls");
 			cout << "\t----SAVING LIST A...\n\n";
@@ -367,12 +402,14 @@ int main()
 			cout << "List saved\n"
 				<< "\tList A path: D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\StudentShuffler\group_a.csv\n"
 				<< "\tList A path: D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\StudentShuffler\group_b.csv\n";
-
+			break;
 		default:
 			cout << "WRONG SELECTION...TRY AGAIN\n";
 			//put a goto
+			goto b;
 			break;
 		}
+	
 	} while (true);
 
 
@@ -382,4 +419,3 @@ int main()
 	return 0;
 
 }
-
