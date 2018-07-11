@@ -15,7 +15,7 @@
 
 using namespace std;
 bool errormessage = true;
-
+int main();
 //class is a user defined object hence we are defining an object STUDENT who has the below attributes
 class STUDENTS
 {
@@ -39,37 +39,38 @@ class STUDENTS
 //this is the function that reads the files and stores the in vectors
 void filetovectorall(vector < STUDENTS >& student_info,string filename)
 {
-	
-	ifstream file(filename);
+		ifstream file(filename);
 
-
-	if (!file.is_open())
-	{
-		errormessage=false;
-		cout << "Error opening file" << endl;
-	}
-	else
-	{
-		while (!file.eof())
+		if (!file.is_open())
 		{
-			STUDENTS obj_student;
-			string adm;
-			string fname;
-			string gender;
-			string sname;
-
-			getline(file, adm, ',');
-			getline(file, sname, ',');
-			getline(file, fname, ',');
-			getline(file, gender, '\n');
-
-
-			obj_student.insert(adm, sname, gender, fname);
-			student_info.push_back(obj_student);
+			errormessage = false;
+			cout << "\n\n\t\tError opening file\n\nReturning to homepage...\n" << endl;
+			Sleep(2000);
+			system("cls");
+			main();	
 		}
-		file.close();
-	}
+		else
+		{
+			while (!file.eof())
+			{
+				STUDENTS obj_student;
+				string adm;
+				string fname;
+				string gender;
+				string sname;
 
+				getline(file, adm, ',');
+				getline(file, sname, ',');
+				getline(file, fname, ',');
+				getline(file, gender, '\n');
+
+
+				obj_student.insert(adm, sname, gender, fname);
+				student_info.push_back(obj_student);
+			}
+			file.close();
+		}
+	
 }
 
 //this function prints out the storage array on the screen
@@ -374,11 +375,7 @@ int main()
 		Sleep(1000);
 		cout << ".";
 		Sleep(1000);
-		cout << ".";
-		Sleep(1000);
-		cout << ".";
-		Sleep(1000);
-		cout << ".\n";
+		cout << ".\n\n\n";
 		system("pause");
 		system("cls");
 		cout << "\tPLEASE MAKE YOUR CHOICE\n"
@@ -397,9 +394,9 @@ int main()
 			{
 				cout << "PLEASE ENTER FILENAME\n";
 				cin >> filename;
-
 				filetovectorall(student_info, filename);
-			}
+			}		
+
 			system("cls");
 			cout << "\tReading Files....\n";
 			Sleep(2000);
@@ -418,7 +415,6 @@ int main()
 			break;
 		default:
 			cout << "WRONG SELECTION...TRY AGAIN\n";
-			//put a goto
 			goto a;
 			break;
 		}
@@ -459,9 +455,7 @@ int main()
 
 			default:
 				cout << "WRONG SELECTION...TRY AGAIN\n";
-				//put a goto
 				goto c;
-
 				break;
 			}
 			break;
@@ -480,7 +474,6 @@ int main()
 			break;
 		default:
 			cout << "WRONG SELECTION...TRY AGAIN\n";
-			//put a goto
 			goto b;
 			break;
 		}
