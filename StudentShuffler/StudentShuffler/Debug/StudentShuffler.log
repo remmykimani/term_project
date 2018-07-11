@@ -1,13 +1,13 @@
 ﻿  StudentShuffler.cpp
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(400): warning C4129: 'S': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(400): warning C4129: 'Y': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(400): warning C4129: 'I': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(400): warning C4129: 'T': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(400): warning C4129: 'g': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(401): warning C4129: 'S': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(401): warning C4129: 'Y': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(401): warning C4129: 'I': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(401): warning C4129: 'T': unrecognized character escape sequence
-d:\strathmore university\year 1\sem 1\introduction to programming\term project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(401): warning C4129: 'g': unrecognized character escape sequence
-  StudentShuffler.vcxproj -> D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\Debug\StudentShuffler.exe
-  StudentShuffler.vcxproj -> D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\Debug\StudentShuffler.pdb (Full PDB)
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(441): warning C4129: 'S': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(441): warning C4129: 'Y': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(441): warning C4129: 'I': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(441): warning C4129: 'T': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(441): warning C4129: 'g': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(442): warning C4129: 'S': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(442): warning C4129: 'Y': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(442): warning C4129: 'I': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(442): warning C4129: 'T': unrecognized character escape sequence
+d:\strathmore_university\year_1\sem_1\introduction_to_programming\term_project\term_project\studentshuffler\studentshuffler\studentshuffler.cpp(442): warning C4129: 'g': unrecognized character escape sequence
+  StudentShuffler.vcxproj -> D:\STRATHMORE_UNIVERSITY\YEAR_1\SEM_1\Introduction_to_Programming\TERM_PROJECT\term_project\StudentShuffler\Debug\StudentShuffler.exe
+  StudentShuffler.vcxproj -> D:\STRATHMORE_UNIVERSITY\YEAR_1\SEM_1\Introduction_to_Programming\TERM_PROJECT\term_project\StudentShuffler\Debug\StudentShuffler.pdb (Full PDB)

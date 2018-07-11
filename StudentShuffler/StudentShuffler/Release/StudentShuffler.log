@@ -1,18 +1,18 @@
 ﻿  StudentShuffler.cpp
-StudentShuffler.cpp(403): warning C4129: 'S': unrecognized character escape sequence
-StudentShuffler.cpp(403): warning C4129: 'Y': unrecognized character escape sequence
-StudentShuffler.cpp(403): warning C4129: 'I': unrecognized character escape sequence
-StudentShuffler.cpp(403): warning C4129: 'T': unrecognized character escape sequence
-StudentShuffler.cpp(403): warning C4129: 'g': unrecognized character escape sequence
-StudentShuffler.cpp(404): warning C4129: 'S': unrecognized character escape sequence
-StudentShuffler.cpp(404): warning C4129: 'Y': unrecognized character escape sequence
-StudentShuffler.cpp(404): warning C4129: 'I': unrecognized character escape sequence
-StudentShuffler.cpp(404): warning C4129: 'T': unrecognized character escape sequence
-StudentShuffler.cpp(404): warning C4129: 'g': unrecognized character escape sequence
+StudentShuffler.cpp(441): warning C4129: 'S': unrecognized character escape sequence
+StudentShuffler.cpp(441): warning C4129: 'Y': unrecognized character escape sequence
+StudentShuffler.cpp(441): warning C4129: 'I': unrecognized character escape sequence
+StudentShuffler.cpp(441): warning C4129: 'T': unrecognized character escape sequence
+StudentShuffler.cpp(441): warning C4129: 'g': unrecognized character escape sequence
+StudentShuffler.cpp(442): warning C4129: 'S': unrecognized character escape sequence
+StudentShuffler.cpp(442): warning C4129: 'Y': unrecognized character escape sequence
+StudentShuffler.cpp(442): warning C4129: 'I': unrecognized character escape sequence
+StudentShuffler.cpp(442): warning C4129: 'T': unrecognized character escape sequence
+StudentShuffler.cpp(442): warning C4129: 'g': unrecognized character escape sequence
   Generating code
-  3 of 278 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
+  3 of 280 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+    15 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  StudentShuffler.vcxproj -> D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\Release\StudentShuffler.exe
-  StudentShuffler.vcxproj -> D:\STRATHMORE UNIVERSITY\YEAR 1\SEM 1\Introduction to Programming\TERM PROJECT\term_project\StudentShuffler\Release\StudentShuffler.pdb (Full PDB)
+  StudentShuffler.vcxproj -> D:\STRATHMORE_UNIVERSITY\YEAR_1\SEM_1\Introduction_to_Programming\TERM_PROJECT\term_project\StudentShuffler\Release\StudentShuffler.exe
+  StudentShuffler.vcxproj -> D:\STRATHMORE_UNIVERSITY\YEAR_1\SEM_1\Introduction_to_Programming\TERM_PROJECT\term_project\StudentShuffler\Release\StudentShuffler.pdb (Full PDB)
