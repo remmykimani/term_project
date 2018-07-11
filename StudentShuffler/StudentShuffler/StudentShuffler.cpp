@@ -1,3 +1,8 @@
+//PROGRAMMER: Mungai Remmy Kimani
+//TITLE: Student Shuffler Program
+//Lecturer: Kevin Omondi
+
+
 #include "stdafx.h"
 #include<iostream>
 #include<fstream>
@@ -7,6 +12,7 @@
 #include "Windows.h"
 #include <shellapi.h>
 #include <tchar.h>
+
 using namespace std;
 bool errormessage = true;
 
@@ -308,6 +314,20 @@ void fileappendgroup_b(vector < STUDENTS >& group_b)
 		}
 }
 
+void open_a()
+{
+	//system("group_a.csv");
+	 string s = "start excel group_a.csv";
+	 system(s.c_str());
+}
+
+void open_b()
+{
+	//system("group_b.csv");
+	string s = " start excel group_b.csv";
+	system(s.c_str());
+}
+
 void openfiles()
 {
 	int choice_openfile;
@@ -319,8 +339,8 @@ void openfiles()
 	{
 	case 1:
 	{
-		system("group_a.csv");
-		system("group_b.csv");
+		open_a();
+		open_b();
 		break;
 	}
 	
@@ -329,8 +349,10 @@ void openfiles()
 	}
 }
 
+
 int main()
 {
+	SetConsoleTitle(L"Student Shuffler");
 	vector<STUDENTS>student_info;
 	vector<STUDENTS>male_students;
 	vector<STUDENTS>female_students;
@@ -345,7 +367,6 @@ int main()
 	
 	do {
 	a:
-		system("cls");
 		cout << "------------WELCOME TO THE STUDENT SHUFFLER PROGRAM--------\n\n";
 		cout << "Loading.";
 		Sleep(1000);
@@ -358,6 +379,7 @@ int main()
 		cout << ".";
 		Sleep(1000);
 		cout << ".\n";
+		system("pause");
 		system("cls");
 		cout << "\tPLEASE MAKE YOUR CHOICE\n"
 			<< "\t\t1.ENTER FILES\n"
